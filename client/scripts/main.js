@@ -4,6 +4,7 @@ import mainTemplate from '../templates/main.hbs';
 import peopleTemplate from '../templates/people.hbs';
 import person_item from '../templates/_person_item.hbs';
 import person_group from '../templates/_person_group.hbs';
+import hb_helper from'./handlebars-helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // make hover effects work on touch devices

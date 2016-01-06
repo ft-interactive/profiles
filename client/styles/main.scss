@@ -140,16 +140,12 @@ main {
   max-width: 720px;
   margin: 0 auto;
   margin-bottom: 2.2em;
-  > p{
-    margin: 0 0 1.2em;
-    font-family: oFontsGetFontFamilyWithFallbacks(FinancierDisplayWeb);
-    font-size: 16px;
-    color: #505050;
-    line-height: 22px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
+  font-family: oFontsGetFontFamilyWithFallbacks(FinancierDisplayWeb);
+  font-size: 16px;
+  color: #505050;
+  line-height: 22px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 // 2015: THE WINNER: */
 .winner_section_title {
@@ -429,7 +425,7 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
   .card {
     padding-right: 50px;
   }
-  .intro p {
+  .intro {
     font-size: 1.2em;
     line-height: 1.4em;
   }
@@ -441,7 +437,7 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
     font-size: 3em;
     margin: 0.3em 0;
   }
-  .intro p {
+  .intro {
       font-size: 1.3em;
       line-height: 1.4em;
     }
@@ -491,7 +487,7 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
     font-size: 4em;
     margin: 0.5em 0;
   }
-  .intro p {
+  .intro {
     font-size: 1.4em;
     line-height: 1.5em;
   }

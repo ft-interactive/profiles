@@ -1,4 +1,4 @@
-import Handlebars from 'hbsfy/runtime';
+var Handlebars = require('hbsfy/runtime');
 
 Handlebars.registerHelper('join', function (array, separator) {
   return array.join(separator);
@@ -66,7 +66,7 @@ Handlebars.registerHelper('linebreaks', function (text) {
     return '';
   }
 
-  var html = Handlebars.Utils.escapeExpression(text).replace(/\n/g, '<br>');
+  var html = Handlebars.Utils.escapeExpression(text).replace(/\n/g, '<br><br>');
 
   return new Handlebars.SafeString(html);
 });
