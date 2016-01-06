@@ -41,12 +41,6 @@ main {
 .runnerup .year {
   display: none;
 }
-// Hamburger: */
-.hamburger_menu {
-  width: 20px;
-  height: 14px;
-  border: 2px solid #c0b6a9;
-}
 
 .winner .job {
   font-size: 1.25em;
@@ -113,9 +107,9 @@ main {
   border-bottom: 1px solid #e9decf;
 }
 
- p {
-    margin: 4px 0;
-  }
+ // p {
+ //    margin: 4px 0;
+ //  }
 
 .img-holder {
   float: left;
@@ -131,20 +125,32 @@ main {
 // Person of  the Year: */
 .headline {
   font-family: oFontsGetFontFamilyWithFallbacks(FinancierDisplayWeb);
-  font-size: 27px;
-  color: #ffffff;
-  line-height: 40px;
-  background: #4a4a4a;
-  font-weight: normal;
+  font-size: 2.5em;
+  color: #333333;
+  line-height: 54px;
   text-align: center;
   position: relative;
-  margin: 24px auto -16px;
-  max-width: 250px;
-  padding: 4px 10px;
+  font-weight: normal;
+  margin: 6px 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.intro {
+  max-width: 720px;
+  margin: 0 auto;
+  margin-bottom: 2.2em;
+  > p{
+    margin: 0 0 1.2em;
+    font-family: oFontsGetFontFamilyWithFallbacks(FinancierDisplayWeb);
+    font-size: 16px;
+    color: #505050;
+    line-height: 22px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+}
 // 2015: THE WINNER: */
 .winner_section_title {
   font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
@@ -416,10 +422,6 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
 }
 
 @include oGridRespondTo(S) {
-  .headline {
-    padding: 8px 30px;
-  }
-
   .img-holder,
   .winner .card__body {
   }
@@ -427,17 +429,22 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
   .card {
     padding-right: 50px;
   }
+  .intro p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+  }
 }
 
 
  @include oGridRespondTo(M) {
   .headline {
-    max-width: 370px;
-    padding: 12px 30px;
-    font-size: 2.5em;
-    margin-bottom: -20px;
+    font-size: 3em;
+    margin: 0.3em 0;
   }
-
+  .intro p {
+      font-size: 1.3em;
+      line-height: 1.4em;
+    }
   .img-holder,
   .winner .card__body {
   }
@@ -481,12 +488,13 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
 
  @include oGridRespondTo(L) {
   .headline {
-    max-width: 370px;
-    padding: 16px 40px;
-    font-size: 2.5em;
-    margin-bottom: -24px;
+    font-size: 4em;
+    margin: 0.5em 0;
   }
-
+  .intro p {
+    font-size: 1.4em;
+    line-height: 1.5em;
+  }
   .img-holder,
   .winner .card__body {
   }

@@ -52,9 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
       person_group
     }
   });
+
+  console.log(groupTitles[0].value)
   document.querySelector('.content').innerHTML = peopleHTML;
-  document.querySelector('.winner .group-heading').innerHTML = groupTitles[0].value;
-  document.querySelector('.runnerup .group-heading').innerHTML = groupTitles[1].value;
-  document.querySelector('.previous .group-heading').innerHTML = groupTitles[2].value;
+  document.querySelector('.' + groupTitles[0].name + ' .group-heading').innerHTML = groupTitles[0].value;
+  document.querySelector('.' + groupTitles[1].name + ' .group-heading').innerHTML = groupTitles[1].value;
+  document.querySelector('.' + groupTitles[2].name + ' .group-heading').innerHTML = groupTitles[2].value;
   document.querySelector('.byline').innerHTML = writeCredits(credits);
 });
