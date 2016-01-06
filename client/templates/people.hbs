@@ -1,6 +1,6 @@
 <div id="people">
     {{#each .}}
-        <div class="people-group {{type}}">
+        <div id="{{type}}" class="people-group {{type}}">
           <div class="group-heading">Group heading here</div>
             {{> person_group .}}
         </div>

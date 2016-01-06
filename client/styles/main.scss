@@ -147,6 +147,11 @@ main {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.intro a {
+  text-decoration: none;
+  color: #2e6e9e;
+}
 // 2015: THE WINNER: */
 .winner_section_title {
   font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);

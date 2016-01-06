@@ -65,7 +65,7 @@ Handlebars.registerHelper('linebreaks', function (text) {
     return '';
   }
 
-  var html = Handlebars.Utils.escapeExpression(text).replace(/\n/g, '<br><br>');
+  var html = text.replace(/\n/g, '<br><br>');
 
   return new Handlebars.SafeString(html);
 });
