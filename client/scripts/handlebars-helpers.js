@@ -22,9 +22,9 @@ Handlebars.registerHelper('href', function (text) {
   return text;
 });
 
-Handlebars.createGlobalHelper = function(name, hash, commands) {
+Handlebars.createGlobalHelper = function (name, hash, commands) {
   commands = commands || {};
-  Handlebars.registerHelper(name, function(context) {
+  Handlebars.registerHelper(name, function (context) {
     if (!context) {
       return '';
     }
@@ -54,12 +54,11 @@ Handlebars.createGlobalHelper = function(name, hash, commands) {
 //   Handlebars.createGlobalHelper('options', options, o);
 // };
 
-Handlebars.createOptionsHelpers = function(options) {
+Handlebars.createOptionsHelpers = function (options) {
   Handlebars.registerHelper('option', function (optName) {
     return options[optName];
   });
 };
-
 
 Handlebars.registerHelper('linebreaks', function (text) {
   if (!text) {

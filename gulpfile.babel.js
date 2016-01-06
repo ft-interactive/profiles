@@ -20,7 +20,7 @@ const AUTOPREFIXER_BROWSERS = [
   'Safari >= 7'
 ];
 
-const DEPLOY_TARGET = '/sites/person-of-the-year'; // e.g. 'features/YOUR-PROJECT-NAME'
+const DEPLOY_TARGET = '/sites/profiles/fomc'; // e.g. 'features/YOUR-PROJECT-NAME'
 
 const BROWSERIFY_ENTRIES = [
   'scripts/main.js',

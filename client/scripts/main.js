@@ -43,8 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //   })
   // });
 
-  console.log(groups);
-  console.log(groupNames);
   document.querySelector('main').innerHTML = mainTemplate(spreadsheet);
 
   var peopleHTML = peopleTemplate(groups, {
@@ -54,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  console.log(groupTitles[0].value)
   document.querySelector('.content').innerHTML = peopleHTML;
   document.querySelector('.' + groupTitles[0].name + ' .group-heading').innerHTML = groupTitles[0].value;
   document.querySelector('.' + groupTitles[1].name + ' .group-heading').innerHTML = groupTitles[1].value;
