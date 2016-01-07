@@ -21,27 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
   var credits = spreadsheet.credits;
 
   // put the dataset into groups and add the corresponding indicators
-  dataset.forEach(function (row) {
-    if (groupNames.indexOf(row.type) === -1) {
-      groupNames.push(row.type);
-      groups.push({
-        type: row.type,
-        person: []
-      });
-    }
+  groupTitles.forEach(function (row) {
+    groupNames.push(row.name)
+    groups.push({
+      type: row.name,
+      person: []
+    });
   });
-
+  
   dataset.forEach(function (row) {
     var groupIndex = groupNames.indexOf(row.type);
     groups[groupIndex].person.push(row);
   });
 
-  // groupTitles.forEach(function (row, index) {
-  //   console.log(index)
-  //   groups.push({
-  //     grouptitle: row.heading
-  //   })
-  // });
 
   document.querySelector('main').innerHTML = mainTemplate(spreadsheet);
 
@@ -53,8 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelector('.content').innerHTML = peopleHTML;
-  document.querySelector('.' + groupTitles[0].name + ' .group-heading').innerHTML = groupTitles[0].value;
-  document.querySelector('.' + groupTitles[1].name + ' .group-heading').innerHTML = groupTitles[1].value;
-  document.querySelector('.' + groupTitles[2].name + ' .group-heading').innerHTML = groupTitles[2].value;
+
+  // add headers to each group based on group sheets
+  groupTitles.forEach(function (row, indx) {
+    document.querySelector('.' + groupTitles[indx].name + ' .group-heading').innerHTML = groupTitles[indx].value;
+  });
+
   document.querySelector('.byline').innerHTML = writeCredits(credits);
 });
