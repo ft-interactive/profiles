@@ -22,18 +22,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // put the dataset into groups and add the corresponding indicators
   groupTitles.forEach(function (row) {
-    groupNames.push(row.name)
+    groupNames.push(row.name);
     groups.push({
       type: row.name,
       person: []
     });
   });
-  
+
   dataset.forEach(function (row) {
     var groupIndex = groupNames.indexOf(row.type);
     groups[groupIndex].person.push(row);
   });
-
 
   document.querySelector('main').innerHTML = mainTemplate(spreadsheet);
 
