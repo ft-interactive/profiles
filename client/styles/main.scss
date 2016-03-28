@@ -67,7 +67,7 @@ main {
 
 .main-image {
   text-align: center;
-  margin: 0 0 -4px;
+  margin: 0 0 10px;
 
   > img {
     max-width: 800px;
@@ -132,15 +132,19 @@ main {
 }
 
 // Person of  the Year: */
+
 .headline {
   font-family: oFontsGetFontFamilyWithFallbacks(FinancierDisplayWeb);
-  font-size: 2.5em;
-  color: #333333;
-  line-height: 54px;
+  font-size: 27px;
+  color: #ffffff;
+  line-height: 40px;
+  background: #4a4a4a;
+  font-weight: normal;
   text-align: center;
   position: relative;
-  font-weight: normal;
-  margin: 6px 0;
+  margin: 24px auto -16px;
+  max-width: 250px;
+  padding: 4px 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -449,10 +453,6 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
 
 
  @include oGridRespondTo(M) {
-  .headline {
-    font-size: 3em;
-    margin: 0.3em 0;
-  }
   .intro {
       font-size: 1.3em;
       line-height: 1.4em;
@@ -499,9 +499,8 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
 }
 
  @include oGridRespondTo(L) {
-  .headline {
-    font-size: 4em;
-    margin: 0.5em 0;
+  .headline{
+    font-size: 2em;  
   }
   .intro {
     font-size: 1.4em;
