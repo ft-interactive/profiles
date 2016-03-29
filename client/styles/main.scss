@@ -141,7 +141,7 @@ main {
 
 .headline {
   font-family: oFontsGetFontFamilyWithFallbacks(FinancierDisplayWeb);
-  font-size: 27px;
+  font-size: 1.3em;
   color: #ffffff;
   line-height: 40px;
   background: #4a4a4a;
@@ -459,6 +459,10 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
 
 
  @include oGridRespondTo(M) {
+  .headline {
+    font-size: 1.5em;
+  }
+
   .intro {
       font-size: 1.3em;
       line-height: 1.4em;
