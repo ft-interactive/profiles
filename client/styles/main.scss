@@ -21,7 +21,7 @@ main {
 
 .table table, th, td {
   text-align: center;
-  border: 1px solid #e9decf;
+  border: 0px solid #e9decf;
   padding: 5px;
   font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
   font-size: .9em;
@@ -32,6 +32,10 @@ main {
   font-weight: 500;
   letter-spacing: 0.1em;
   font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+}
+
+.table table, td {
+  width: 33.33%;
 }
 
 .site-header {
