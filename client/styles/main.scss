@@ -19,22 +19,25 @@ main {
   padding: 0 10px;
 }
 
-.table table, th, td {
+.table table, 
+th, 
+td {
   text-align: center;
   border: 0px solid #e9decf;
   padding: 5px;
   font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
-  font-size: .9em;
+  font-size: 0.9em;
  }
 
-.table table, th {
+.table table, 
+th {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.1em;
   font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 }
 
-.table table, td {
+.table td {
   width: 33.33%;
 }
 
@@ -513,7 +516,7 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
 }
 
  @include oGridRespondTo(L) {
-  .headline{
+  .headline {
     font-size: 2em;  
   }
   .intro {
