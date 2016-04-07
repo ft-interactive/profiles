@@ -19,6 +19,25 @@ main {
   padding: 0 10px;
 }
 
+.table table, th, td {
+  text-align: center;
+  border: 0px solid #e9decf;
+  padding: 5px;
+  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+  font-size: .9em;
+ }
+
+.table table, th {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-family: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+}
+
+.table table, td {
+  width: 33.33%;
+}
+
 .site-header {
   padding: 18px 0 14px;
   text-align: center;
@@ -58,7 +77,7 @@ main {
 
 .main-image {
   text-align: center;
-  margin: 0 0 -4px;
+  margin: 0 0 20px;
 
   > img {
     max-width: 800px;
@@ -123,15 +142,19 @@ main {
 }
 
 // Person of  the Year: */
+
 .headline {
   font-family: oFontsGetFontFamilyWithFallbacks(FinancierDisplayWeb);
-  font-size: 2.5em;
-  color: #333333;
-  line-height: 54px;
+  font-size: 1.3em;
+  color: #ffffff;
+  line-height: 40px;
+  background: #4a4a4a;
+  font-weight: normal;
   text-align: center;
   position: relative;
-  font-weight: normal;
-  margin: 6px 0;
+  margin: 24px auto -16px;
+  max-width: 250px;
+  padding: 4px 10px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -441,9 +464,9 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
 
  @include oGridRespondTo(M) {
   .headline {
-    font-size: 3em;
-    margin: 0.3em 0;
+    font-size: 1.5em;
   }
+
   .intro {
       font-size: 1.3em;
       line-height: 1.4em;
@@ -490,9 +513,8 @@ $linked-in-logo: 'PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3
 }
 
  @include oGridRespondTo(L) {
-  .headline {
-    font-size: 4em;
-    margin: 0.5em 0;
+  .headline{
+    font-size: 2em;  
   }
   .intro {
     font-size: 1.4em;
