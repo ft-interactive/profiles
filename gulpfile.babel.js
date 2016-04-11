@@ -156,7 +156,7 @@ gulp.task('serve', ['styles'], function (done) {
 
     // refresh browser after other changes
     gulp.watch(['client/**/*.html'], browserSync.reload);
-    gulp.watch(['client/styles/**/*.{scss,css}'], ['styles', 'scsslint', browserSync.reload]);
+    gulp.watch(['client/styles/**/*.{scss,css}'], ['styles', browserSync.reload]);
     gulp.watch(['client/images/**/*'], browserSync.reload);
 
     done();
@@ -195,16 +195,10 @@ gulp.task('eslint', () => gulp.src('client/scripts/**/*.js')
   .pipe($.if(env === 'production', $.eslint.failAfterError()))
 );
 
-// lints SCSS files
-gulp.task('scsslint', () => gulp.src('client/styles/**/*.scss')
-  .pipe($.scssLint({bundleExec: true}))
-  // .pipe($.if(env === 'production', $.scssLint.failReporter()))
-);
-
 // sets up watch-and-rebuild for JS and CSS
 gulp.task('watch', done => {
   runSequence('clean', ['scripts', 'styles'], () => {
-    gulp.watch('./client/**/*.scss', ['styles', 'scsslint']);
+    gulp.watch('./client/**/*.scss', ['styles']);
     gulp.watch('./client/**/*.{js,hbs}', ['scripts', 'eslint']);
     done();
   });
@@ -215,7 +209,7 @@ gulp.task('build', done => {
   env = 'production';
 
   runSequence(
-    ['clean', 'scsslint', 'eslint'],
+    ['clean', 'eslint'],
     ['scripts', 'styles', 'copy'],
     ['html', 'images'],
   done);
